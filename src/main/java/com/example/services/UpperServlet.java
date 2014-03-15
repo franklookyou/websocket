@@ -29,8 +29,8 @@ public class UpperServlet extends WebSocketServlet {
         {
             JsonObjectBuilder builder = Json.createObjectBuilder();
             builder.add( "upper", message.toUpperCase() );
-            builder.add( "x", x += 3 );
-            builder.add( "y", y += 1 );
+            builder.add( "x", x += 200 );
+            builder.add( "y", y += 200 );
             builder.add( "width", 50 );
             builder.add( "height", 75 );
             JsonObject result = builder.build();
@@ -68,7 +68,7 @@ public class UpperServlet extends WebSocketServlet {
     @Override
     public void configure( WebSocketServletFactory factory ) {
         // set a 10 second idle timeout
-        factory.getPolicy().setIdleTimeout( 10000 );
+        factory.getPolicy().setIdleTimeout( 1000000 );
         // register my socket
         factory.register( AnnotatedEchoSocket.class );
     }

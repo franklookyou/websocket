@@ -22,8 +22,6 @@ mainClass in oneJar := Some( "org.lookyou.Main" )
 
 // variables
 
-//"9.1.0.v20131115"
-//"9.1.1.v20140108"
 val orgEclipseJettyVersion : String = "9.1.2.v20140210"
 
 // dependencies

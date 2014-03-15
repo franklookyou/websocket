@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 
 <html>
-
 <head>
     <meta http-equiv="content-type" content="text/xhtml; charset=ISO-8859-1"/>
 
     <title>WebSocket/Canvas/Json Client</title>
 </head>
 
-<body>
-    <script language="javascript" type="text/javascript" src="/main.js"></script>
+<body style="overflow: hidden">
+    <div style="padding: 0; margin : 0; position:absolute; left:0; top:0; z-index:-1;"  id="containerId"></div>
 
-    <h2 style="text-align: center;">WebSocket/Canvas/Json Client</h2>
-    <br>
-    <div style="text-align: center;">
-        <canvas id="canvasId" width="200" height="200"></canvas>
+    <div style="background-color: lightgray; opacity: .5;">
+        <h2 style="text-align: center;">WebSocket/Canvas/Json Client</h2>
+        <br>
+        <div style="text-align: center;">
+            <script language="javascript" type="text/javascript" src="/kinetic-v5.0.1.js"></script>
+            <script language="javascript" type="text/javascript" src="/main.js"></script>
 
-        <form action="">
-            <input onclick="upperCase()" value="Press me" type="button">
-            <input id="textId" name="message" value="Hello WebSocket!" type="text">
-            <br>
-        </form>
+            <form action="">
+                <input onclick="upperCase()" value="Press me" type="button">
+                <input id="textId" name="message" value="Hello WebSocket!" type="text">
+                <br>
+            </form>
+        </div>
+        <div id="outputId"><span>AWAITING INPUT!</span></div>
     </div>
-    <div id="outputId"></div>
 </body>
 </html>
